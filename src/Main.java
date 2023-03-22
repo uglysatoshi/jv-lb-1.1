@@ -20,6 +20,7 @@ public class Main {
             System.out.println("Логарифм от отрицательного значения не существует, введите y заново");
             System.out.print("Введите y: "); y = in.nextDouble();
         }
+        // Деление на ноль
         while(Math.atan(b + a) == 0) {
             System.out.println("Знаменатель не может быть равен нулю, введите значения b, a заново");
             System.out.print("Введите a: "); a = in.nextDouble();
@@ -47,9 +48,9 @@ public class Main {
     }
 
     public static void Base() {
-            // Базовый уровень
-            System.out.print("Введите x: "); double x = in.nextDouble();
-            System.out.print("Введите y: "); double y = in.nextDouble();
+        // Базовый уровень
+        System.out.print("Введите x: "); double x = in.nextDouble();
+        System.out.print("Введите y: "); double y = in.nextDouble();
         double M = Math.cos(Math.toDegrees(2*y)) + 3.6 * Math.pow(Math.exp(1), x); // функция из высокого уровня
         System.out.println("Функция M = " + M); // Вывод M
     }
