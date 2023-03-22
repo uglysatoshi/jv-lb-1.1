@@ -16,7 +16,7 @@ public class Main {
             System.out.print("Введите b: "); b = in.nextDouble();
         }
         // логарифм отрицательный
-        while (Math.log(y) < 0) {
+        while (y < 0) {
             System.out.println("Логарифм от отрицательного значения не существует, введите y заново");
             System.out.print("Введите y: "); y = in.nextDouble();
         }
@@ -33,21 +33,19 @@ public class Main {
         System.out.print("Введите x: "); double x = in.nextDouble();
         System.out.print("Введите y: "); double y = in.nextDouble();
         // логарифм отрицательный
-        while (Math.log(y) < 0) {
+        while (y < 0) {
             System.out.println("Логарифм от отрицательного значения не существует, введите y заново");
-            System.out.print("Введите y: ");
-            y = in.nextDouble();
-            while (Math.log(y) + 2 * Math.pow(x, 3) == 0) {
-                System.out.println("Знаменатель не может быть равен нулю, введите значения y, x заново");
-                System.out.print("Введите y: ");
-                y = in.nextDouble();
-                System.out.print("Введите x: ");
-                x = in.nextDouble();
-            }
-            double L = (0.81 * Math.cos(Math.toDegrees(x))) / Math.log(y) + 2 * Math.pow(x, 3); // фунцкия из среднего уровня
-            System.out.println("Функция L = " + L); // вывод L
+            System.out.print("Введите y: "); y = in.nextDouble();
         }
+        while (Math.log(y) + 2 * Math.pow(x, 3) == 0) {
+            System.out.println("Знаменатель не может быть равен нулю, введите значения y, x заново");
+            System.out.print("Введите y: "); y = in.nextDouble();
+            System.out.print("Введите x: "); x = in.nextDouble();
+        }
+        double L = (0.81 * Math.cos(Math.toDegrees(x))) / Math.log(y) + 2 * Math.pow(x, 3); // фунцкия из среднего уровня
+        System.out.println("Функция L = " + L); // вывод L
     }
+
     public static void Base() {
             // Базовый уровень
             System.out.print("Введите x: "); double x = in.nextDouble();
